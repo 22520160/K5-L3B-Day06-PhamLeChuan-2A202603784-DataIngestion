@@ -112,7 +112,7 @@ def main() -> None:
     print("Saving strategy C...")
     store.upsert("C_paragraph_filter", chunks_b, vectors_b)
 
-    benchmark_path = Path("data/benchmark.json")
+    benchmark_path = Path("../benchmark/benchmark.json")
     questions = json.loads(benchmark_path.read_text(encoding="utf-8"))
 
     strategy_names = [
