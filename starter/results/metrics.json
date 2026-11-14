@@ -1,0 +1,50 @@
+{
+  "A_fixed:dev": {
+    "hit_at_1_count": 0,
+    "hit_at_1_total": 15,
+    "hit_at_1": 0.0,
+    "evidence_hit_at_3_count": 4,
+    "evidence_hit_at_3_total": 15,
+    "evidence_hit_at_3": 0.26666666666666666
+  },
+  "A_fixed:test": {
+    "hit_at_1_count": 0,
+    "hit_at_1_total": 5,
+    "hit_at_1": 0.0,
+    "evidence_hit_at_3_count": 1,
+    "evidence_hit_at_3_total": 5,
+    "evidence_hit_at_3": 0.2
+  },
+  "B_paragraph:dev": {
+    "hit_at_1_count": 3,
+    "hit_at_1_total": 15,
+    "hit_at_1": 0.2,
+    "evidence_hit_at_3_count": 4,
+    "evidence_hit_at_3_total": 15,
+    "evidence_hit_at_3": 0.26666666666666666
+  },
+  "B_paragraph:test": {
+    "hit_at_1_count": 1,
+    "hit_at_1_total": 5,
+    "hit_at_1": 0.2,
+    "evidence_hit_at_3_count": 1,
+    "evidence_hit_at_3_total": 5,
+    "evidence_hit_at_3": 0.2
+  },
+  "C_paragraph_filter:dev": {
+    "hit_at_1_count": 3,
+    "hit_at_1_total": 15,
+    "hit_at_1": 0.2,
+    "evidence_hit_at_3_count": 4,
+    "evidence_hit_at_3_total": 15,
+    "evidence_hit_at_3": 0.26666666666666666
+  },
+  "C_paragraph_filter:test": {
+    "hit_at_1_count": 1,
+    "hit_at_1_total": 5,
+    "hit_at_1": 0.2,
+    "evidence_hit_at_3_count": 1,
+    "evidence_hit_at_3_total": 5,
+    "evidence_hit_at_3": 0.2
+  }
+}

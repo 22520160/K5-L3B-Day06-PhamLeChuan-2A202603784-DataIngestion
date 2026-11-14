@@ -1,0 +1,214 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "What was the cutoff date for the data used in the October 2026 Commodity Markets Outlook report?",
+    "expected_answer": "October 14, 2026.",
+    "gold_source_id": "book",
+    "gold_page": 4,
+    "evidence_quote": "The cutoff date for the data used in this report was October 14, 2026.",
+    "filter": {}
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "By what percentage are overall commodity prices projected to increase in 2026?",
+    "expected_answer": "23 percent.",
+    "gold_source_id": "book",
+    "gold_page": 9,
+    "evidence_quote": "Overall, commodity prices are projected to increase by 23 percent in 2026, to their second-highest level since 2013, led by a 32 percent jump in energy prices.",
+    "filter": {
+      "section": "Executive Summary"
+    }
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "What is the forecast average price per barrel for Brent oil in 2027 under the adverse scenario?",
+    "expected_answer": "$105 per barrel.",
+    "gold_source_id": "book",
+    "gold_page": 9,
+    "evidence_quote": "In an adverse scenario, oil prices would average $105 per barrel in 2027, and food prices would exceed their 2022 level.",
+    "filter": {}
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "How many barrels of oil reserves did International Energy Agency (IEA) member countries agree in early October to release through January 2027?",
+    "expected_answer": "100 million barrels.",
+    "gold_source_id": "book",
+    "gold_page": 10,
+    "evidence_quote": "Steep increases in the cost of diesel contributed to International Energy Agency (IEA) member countries agreeing in early October to release 100 million barrels of oil reserves through January 2027, initially focused on diesel.",
+    "filter": {}
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "How many people experienced severe food insecurity worldwide in 2025?",
+    "expected_answer": "779 million people.",
+    "gold_source_id": "book",
+    "gold_page": 18,
+    "evidence_quote": "People experiencing severe food insecurity worldwide numbered 779 million in 2025, down from 803 million in 2024 and 837 million in 2021.",
+    "filter": {}
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "How much funding has the World Bank Group made available through existing instruments to support countries facing impacts from the Middle East conflict?",
+    "expected_answer": "$50 billion to $60 billion, including $25 billion in pre-arranged financing.",
+    "gold_source_id": "book",
+    "gold_page": 19,
+    "evidence_quote": "To support countries facing rising fiscal pressures and other impacts from the conflict in the Middle East, the World Bank Group has made $50 billion to $60 billion available through existing instruments, including $25 billion in pre-arranged financing.",
+    "filter": {}
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "According to Table 1, what is the October 2026 forecast price for Copper in 2026f?",
+    "expected_answer": "$13,200 per metric ton ($/mt).",
+    "gold_source_id": "book",
+    "gold_page": 21,
+    "evidence_quote": "Copper | $/mt | 9142 | 9947 | 13200 | 13000 | 12500",
+    "filter": {
+      "category": "Metals and minerals"
+    }
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "What level did average U.S. retail diesel prices approach for the first time in October 2026?",
+    "expected_answer": "$6.2 per gallon.",
+    "gold_source_id": "book",
+    "gold_page": 22,
+    "evidence_quote": "The premium of European diesel over Brent crude reached a record monthly average of about $91/bbl in September, before moderating slightly the following month, while average U.S. retail diesel prices approached $6.2 per gallon for the first time in October (figure 7.F).",
+    "filter": {
+      "section": "Energy"
+    }
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "By what percentage did European LNG imports fall year-on-year in 2026Q2 due to U.S. LNG exports shifting toward East Asia?",
+    "expected_answer": "More than 10 percent.",
+    "gold_source_id": "book",
+    "gold_page": 29,
+    "evidence_quote": "This shift reduced European LNG imports by more than 10 percent (y/y) in 2026Q2 and heightened concerns about low EU inventories, which in mid-October remained at the bottom of their range over the past 10-years (figure 10.C).",
+    "filter": {}
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "To what record annual output is India's coal production on track to increase in 2026?",
+    "expected_answer": "1,090 million metric tons (mmt).",
+    "gold_source_id": "book",
+    "gold_page": 31,
+    "evidence_quote": "These declines are expected to be partly offset by an increase in India of 1.2 percent (13 mmt), taking output to an annual record of 1,090 mmt.",
+    "filter": {}
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "By what percentage did Indonesia raise its mandatory palm oil share in biodiesel blends?",
+    "expected_answer": "From 40 to 50 percent.",
+    "gold_source_id": "book",
+    "gold_page": 33,
+    "evidence_quote": "Additional support came from Indonesia's raising of the mandatory palm oil share in biodiesel blends from 40 to 50 percent.",
+    "filter": {
+      "section": "Agriculture"
+    }
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "What record high is global coffee production projected to reach in the 2026–27 season?",
+    "expected_answer": "190 million bags.",
+    "gold_source_id": "book",
+    "gold_page": 40,
+    "evidence_quote": "Global coffee production is projected to reach a record high of 190 million bags in 2026–27, up 6 percent from the previous season, marking a fourth consecutive annual increase.",
+    "filter": {}
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "How many very strong El Niño episodes occurred between 1950 and the 2026–27 episode?",
+    "expected_answer": "Four (in 1982–83, 1991–92, 1997–98, and 2015–16).",
+    "gold_source_id": "book",
+    "gold_page": 43,
+    "evidence_quote": "Since 1950, there have been 27 El Niño episodes, four of which were very strong (in 1982–83, 1991–92, 1997–98, and 2015–16), with the current episode expected to become the fifth.",
+    "filter": {}
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "What is China's official annual aluminum smelting capacity ceiling?",
+    "expected_answer": "45 million tons per year.",
+    "gold_source_id": "book",
+    "gold_page": 49,
+    "evidence_quote": "Aluminum supply is expected to remain constrained, with production in China—which accounts for about 60 percent of global output—operating close to its official smelting capacity ceiling of 45 million tons per year, Gulf output still recovering from a 10 percent decline in the first half of 2026 (y/y), and European output about 20 percent below 2021H1 levels as persistently high electricity costs continue to weigh on smelter competitiveness.",
+    "filter": {}
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "What percentage of global mined platinum is sourced from South Africa?",
+    "expected_answer": "About 70 percent.",
+    "gold_source_id": "book",
+    "gold_page": 55,
+    "evidence_quote": "Looking ahead, overall supply is projected to improve gradually over 2027–28, with output in South Africa—the source of about 70 percent of mined platinum—little changed, while secondary supply is expected to rise further as still-high prices continue to encourage recycling.",
+    "filter": {}
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "question": "What percentage of U.S. potash demand is supplied by Canada?",
+    "expected_answer": "More than 80 percent.",
+    "gold_source_id": "book",
+    "gold_page": 48,
+    "evidence_quote": "With Canada supplying more than 80 percent of U.S. potash demand, tariffs or other restrictions on this trade could redirect U.S. purchases toward other suppliers, reducing the efficiency of supply networks and potentially pushing global prices above forecasts.",
+    "filter": {
+      "section": "Fertilizers"
+    }
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "question": "How much did China's urea exports reach in 2026 compared to 2025?",
+    "expected_answer": "7.0 million metric tons (mmt) in 2026, up from 4.9 mmt in 2025.",
+    "gold_source_id": "book",
+    "gold_page": 47,
+    "evidence_quote": "China's urea exports are expected to reach 7.0 million metric tons (mmt) in 2026, up from 4.9 mmt in 2025.",
+    "filter": {}
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "question": "Which four individual commodities stand out as important bridges across commodity groups in the Special Focus volatility connectedness analysis?",
+    "expected_answer": "Copper, maize, oil, and silver.",
+    "gold_source_id": "book",
+    "gold_page": 56,
+    "evidence_quote": "At the individual commodity level, copper, maize, oil, and silver stand out as important bridges across groups.",
+    "filter": {
+      "section": "Special Focus"
+    }
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "question": "What is the forecast horizon H used to compute the FEVD matrix in Appendix SF.1?",
+    "expected_answer": "24 days (H = 24).",
+    "gold_source_id": "book",
+    "gold_page": 65,
+    "evidence_quote": "Compute the FEVD matrix at a forecast horizon of 24 days, H = 24.",
+    "filter": {}
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "question": "What share of global price volatility is commodity-specific versus associated with shocks in other commodity markets according to the 2006–26 analysis?",
+    "expected_answer": "Roughly two-thirds is commodity-specific, while about one-third is associated with shocks in other commodity markets.",
+    "gold_source_id": "book",
+    "gold_page": 56,
+    "evidence_quote": "Using a measure of price volatility connectedness across 15 internationally traded commodities over 2006–26, commodity-specific factors are found to dominate price volatility: roughly two-thirds is commodity-specific, while about one-third is associated with shocks in other commodity markets.",
+    "filter": {}
+  }
+]

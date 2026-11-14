@@ -1,16 +1,69 @@
-"""TODO: evaluate retrieved evidence and preserve per-query traces."""
+from collections import defaultdict
 from typing import Any
 
 
-def evaluate_query(question: dict[str, Any], hits: list[dict[str, Any]]) -> dict[str, Any]:
-    """TODO: check source/page and enough gold evidence; keep hit@1 and hit@3 trace.
+def _normalize(value: Any) -> str:
+    return " ".join(str(value).casefold().split())
 
-    Accept any documented alternative gold evidence. Do not infer human grounding
-    or chunk coherence labels from exact string match.
-    """
-    raise NotImplementedError("TODO: evaluate_query")
+
+def _is_evidence_hit(
+    question: dict[str, Any],
+    hit: dict[str, Any],
+) -> bool:
+    gold_source = str(question["gold_source_id"])
+    gold_page = question["gold_page"]
+    evidence = _normalize(question["evidence_quote"])
+
+    source_match = (
+        str(hit.get("document_id")) == gold_source
+        or str(hit.get("source")) == gold_source
+    )
+
+    page_match = hit.get("page") == gold_page
+    text_match = evidence in _normalize(hit.get("text", ""))
+
+    return source_match and page_match and text_match
+
+
+def evaluate_query(
+    question: dict[str, Any],
+    hits: list[dict[str, Any]],
+) -> dict[str, Any]:
+    evidence_hits = [_is_evidence_hit(question, hit) for hit in hits]
+
+    return {
+        "question_id": question["id"],
+        "split": question["split"],
+        "hit_at_1": bool(evidence_hits and evidence_hits[0]),
+        "evidence_hit_at_3": any(evidence_hits),
+        "matched_positions": [
+            index + 1
+            for index, matched in enumerate(evidence_hits)
+            if matched
+        ],
+    }
 
 
 def summarize(traces: list[dict[str, Any]]) -> dict[str, Any]:
-    """TODO: aggregate Hit@1 and Evidence Hit@3 by strategy and dev/test split."""
-    raise NotImplementedError("TODO: summarize")
+    grouped: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
+
+    for trace in traces:
+        grouped[(trace["strategy"], trace["split"])].append(trace)
+
+    summary: dict[str, Any] = {}
+
+    for (strategy, split), items in sorted(grouped.items()):
+        total = len(items)
+        hit_at_1 = sum(item["hit_at_1"] for item in items)
+        hit_at_3 = sum(item["evidence_hit_at_3"] for item in items)
+
+        summary[f"{strategy}:{split}"] = {
+            "hit_at_1_count": hit_at_1,
+            "hit_at_1_total": total,
+            "hit_at_1": hit_at_1 / total if total else 0,
+            "evidence_hit_at_3_count": hit_at_3,
+            "evidence_hit_at_3_total": total,
+            "evidence_hit_at_3": hit_at_3 / total if total else 0,
+        }
+
+    return summary

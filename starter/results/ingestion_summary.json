@@ -1,0 +1,11 @@
+{
+  "document": "data\\book.pdf",
+  "content_pages": 68,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimensions": 384,
+  "strategies": {
+    "A_fixed": 647,
+    "B_paragraph": 268,
+    "C_paragraph_filter": 268
+  }
+}
