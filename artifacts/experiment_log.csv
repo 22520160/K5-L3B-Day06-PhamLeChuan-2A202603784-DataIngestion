@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,"Fixed-size character windows",500,50,"document_id; source; page; section; category","None","sentence-transformers/all-MiniLM-L6-v2","Fixed-size chunks provide a simple retrieval baseline but may cut sentences and lose context.",0.0000,0.2667,0.0000,0.2000,"647 chunks; 384 dimensions; fixed chunks sometimes split evidence."
+B,"Paragraph-based chunks",1200,0,"document_id; source; page; section; category","None","sentence-transformers/all-MiniLM-L6-v2","Paragraph-based chunks should preserve more semantic context and improve retrieval over fixed windows.",0.2000,0.2667,0.2000,0.2000,"268 chunks; better Hit@1 than A; some evidence was still missed."
+C,"Paragraph-based chunks",1200,0,"document_id; source; page; section; category","section/category when provided","sentence-transformers/all-MiniLM-L6-v2","Metadata filters should restrict retrieval to the relevant report section or category.",0.2000,0.2667,0.2000,0.2000,"268 chunks; filters were applied; no measurable improvement over B on this test set."
