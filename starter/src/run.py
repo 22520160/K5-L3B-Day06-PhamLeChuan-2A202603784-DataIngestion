@@ -82,7 +82,7 @@ def main() -> None:
     chunks_b = [
         chunk
         for page in content_pages
-        for chunk in by_paragraph(page, max_size=1200)
+        for chunk in by_paragraph(page, max_size=800)
     ]
 
     print(f"Content pages: {len(content_pages)}")

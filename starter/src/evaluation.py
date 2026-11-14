@@ -1,9 +1,29 @@
 from collections import defaultdict
 from typing import Any
+import re
+import unicodedata
 
 
-def _normalize(value: Any) -> str:
-    return " ".join(str(value).casefold().split())
+def _normalize(value: object) -> str:
+    text = unicodedata.normalize("NFKC", str(value))
+
+    replacements = {
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u201c": '"',
+        "\u201d": '"',
+        "\u2013": "-",
+        "\u2014": "-",
+        "\u00a0": " ",
+    }
+
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+
+    text = re.sub(r"\s*([=:/%])\s*", r"\1", text)
+    text = re.sub(r"\s+", " ", text)
+
+    return text.casefold().strip()
 
 
 def _is_evidence_hit(

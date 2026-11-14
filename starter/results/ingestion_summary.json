@@ -5,7 +5,7 @@
   "embedding_dimensions": 384,
   "strategies": {
     "A_fixed": 647,
-    "B_paragraph": 268,
-    "C_paragraph_filter": 268
+    "B_paragraph": 388,
+    "C_paragraph_filter": 388
   }
 }
